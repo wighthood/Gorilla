@@ -13,6 +13,6 @@ public class Move : MonoBehaviour
         float deplacementHorizontal = Input.GetAxis("Horizontal");
  
         // Déplacer le personnage en utilisant le Rigidbody2D
-        GetComponent<Rigidbody2D>().velocity = new Vector2(deplacementHorizontal * vitesse, -1f);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(deplacementHorizontal * vitesse* Time.deltaTime*500, 0f);
     }
 }
