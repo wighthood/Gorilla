@@ -8,16 +8,21 @@ public class movement : MonoBehaviour
     public Rigidbody2D Player;
 
     [Header("Movement")]
-    public float movspeed;
-    float horizontalspeed = 10f;
+    public float movspeed=10f;
+    float horizontalspeed;
 
     [Header("jump")]
     public float JumpForce = 10f;
 
+    [Header("groundcheck")]
+    public Transform groundcheckpos;
+    public Vector2 groundchecksize = new Vector2(0.5f,0.05f);
+    public LayerMask groundlayer;
+
     // Update is called once per frame
     void Update()
     {
-        Player.velocity = new Vector2(horizontalspeed * Time.deltaTime * movspeed*100, Player.velocity.y);
+        Player.velocity = new Vector2(horizontalspeed * movspeed, Player.velocity.y);
     }
 
     public void move(InputAction.CallbackContext Context)
@@ -27,9 +32,28 @@ public class movement : MonoBehaviour
 
     public void jump(InputAction.CallbackContext Context)
     {
-        if (Context.performed)
+        if (isgrounded())
         {
-            Player.velocity = new Vector2(Player.velocity.x, JumpForce);
+            if (Context.performed)
+            {
+                Player.velocity = new Vector2(Player.velocity.x, JumpForce);
+            }
         }
+    }
+
+    private bool isgrounded()
+    {
+        if (Physics2D.OverlapBox(groundcheckpos.position, groundchecksize, 0 ,groundlayer)) 
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireCube(groundcheckpos.position, groundchecksize);
     }
 }
