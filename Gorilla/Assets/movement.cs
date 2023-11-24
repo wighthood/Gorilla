@@ -19,6 +19,9 @@ public class movement : MonoBehaviour
     public Vector2 groundchecksize = new Vector2(0.5f,0.05f);
     public LayerMask groundlayer;
 
+    [Header("shoot")]
+    [SerializeField] GameObject Bullet;
+     
     // Update is called once per frame
     void Update()
     {
@@ -56,4 +59,10 @@ public class movement : MonoBehaviour
         Gizmos.color = Color.white;
         Gizmos.DrawWireCube(groundcheckpos.position, groundchecksize);
     }
+
+    public void Throwball(InputAction.CallbackContext Context)
+    {
+        GameObject proj = Instantiate(Bullet, transform.position, transform.rotation);
+    }
+
 }
