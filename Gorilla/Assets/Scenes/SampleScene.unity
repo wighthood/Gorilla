@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 618152786}
   m_Layer: 0
   m_Name: Player.Camera
-  m_TagString: MainCamera
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,7 +628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1409513926
 AudioListener:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ Transform:
   m_GameObject: {fileID: 1928564057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -894,6 +894,7 @@ MonoBehaviour:
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
+  Bullet: {fileID: 2226059724574913821, guid: 2a5b47560b1b27e42957bce694b2108f, type: 3}
 --- !u!114 &1928564064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +992,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 02bda6ae-123e-4a51-9112-a3dfb29824c1
     m_ActionName: Player/Jump[/Keyboard/w,/Keyboard/space,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1928564063}
+        m_TargetAssemblyTypeName: movement, Assembly-CSharp
+        m_MethodName: Throwball
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dd20083d-2b1f-49bd-a83a-0bbc27424ada
+    m_ActionName: Player/Shoot[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
