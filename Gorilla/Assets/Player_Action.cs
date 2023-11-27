@@ -21,7 +21,9 @@ public class movement : MonoBehaviour
 
     [Header("shoot")]
     [SerializeField] GameObject Bullet;
-     
+    public float launchForce = 10f;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -62,7 +64,11 @@ public class movement : MonoBehaviour
 
     public void Throwball(InputAction.CallbackContext Context)
     {
-        GameObject proj = Instantiate(Bullet, transform.position, transform.rotation);
+        if (Context.started)
+        {
+            GameObject proj = Instantiate(Bullet, transform.position, transform.rotation);
+            
+        }
     }
 
 }
