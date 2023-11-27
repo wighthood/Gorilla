@@ -7,6 +7,9 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class movement : MonoBehaviour
 {
+    ChangeAngle();
+    ResetAngle();
+    forceup();
     public Rigidbody2D Player;
 
     [Header("Movement")]
