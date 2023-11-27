@@ -100,6 +100,8 @@ public class movement : MonoBehaviour
         }
     }
 
+ 
+
     private void forceup()
     {
         if (powering)

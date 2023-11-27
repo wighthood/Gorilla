@@ -9,4 +9,16 @@ public class Bullet_Movement : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = Direction;
     }
+
+    void Start()
+    {
+        StartCoroutine(SelfDestruct());
+    }
+
+    IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
 }
+
