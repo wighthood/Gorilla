@@ -7,17 +7,20 @@ public class WorldGenerator : MonoBehaviour
     public WorldRenderer worldRenderer;
     public BlockData blockData;
 
+    private float seed;
     public int mapLength = 50;
     public float amplitude = 1;
     public float frequency = 0.01f;
 
     private void Start()
     {
+        seed = Random.Range(0, 10);
         GenerateMap1DNoise();
     }
     private float GetNoiseValue(int x, int y)
     {
-        return amplitude * Mathf.PerlinNoise(x * frequency, y * frequency);
+        
+        return amplitude * Mathf.PerlinNoise((x+seed) * frequency, (y+seed) * frequency);
     }
 
     public void GenerateMap1DNoise()
