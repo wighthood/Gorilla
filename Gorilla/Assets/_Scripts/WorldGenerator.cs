@@ -25,7 +25,7 @@ public class WorldGenerator : MonoBehaviour
 
     public void GenerateMap1DNoise()
     {
-        worldRenderer.ClearGroundTilemap();
+        //worldRenderer.ClearGroundTilemap();
         for (int x = 0; x < mapLength; x++)
         {
             var noise = GetNoiseValue(x, 1);

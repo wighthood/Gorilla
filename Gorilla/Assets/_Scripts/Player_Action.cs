@@ -141,9 +141,9 @@ public class movement : MonoBehaviour
                 {
                     angle = 45;
                 }
-                else if (angle > 135)
+                else if (angle > 180)
                 {
-                    angle = 135;
+                    angle = 180;
                 }
                 break;
             case -1:
@@ -151,9 +151,9 @@ public class movement : MonoBehaviour
                 {
                     angle = -45;
                 }
-                else if (angle < -135)
+                else if (angle < -180)
                 {
-                    angle = -135;
+                    angle = -180;
                 }
                 break;
             default:
