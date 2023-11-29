@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 18829173}
   - component: {fileID: 18829172}
-  - component: {fileID: 18829171}
   - component: {fileID: 18829170}
   - component: {fileID: 18829169}
   - component: {fileID: 18829168}
@@ -171,7 +170,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 18829171}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: movement, Assembly-CSharp
         m_MethodName: move
         m_Mode: 0
@@ -227,7 +226,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 18829171}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: movement, Assembly-CSharp
         m_MethodName: jump
         m_Mode: 0
@@ -243,7 +242,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/w,/Keyboard/space,/Keyboard/upArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 18829171}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: movement, Assembly-CSharp
         m_MethodName: Throwball
         m_Mode: 0
@@ -259,7 +258,7 @@ MonoBehaviour:
     m_ActionName: Player/Shoot[/Keyboard/f]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 18829171}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: movement, Assembly-CSharp
         m_MethodName: aim
         m_Mode: 0
@@ -350,30 +349,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &18829171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18829167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90491cbcf5a808044a7ada68fa7a3fb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 18829169}
-  movspeed: 10
-  dir: 1
-  JumpForce: 10
-  groundcheckpos: {fileID: 466563070}
-  groundchecksize: {x: 0.3, y: 0.05}
-  groundlayer:
-    serializedVersion: 2
-    m_Bits: 8
-  Bullet: {fileID: 2226059724574913821, guid: 2a5b47560b1b27e42957bce694b2108f, type: 3}
-  launchForce: 0
-  angle: 0
 --- !u!212 &18829172
 SpriteRenderer:
   m_ObjectHideFlags: 0
