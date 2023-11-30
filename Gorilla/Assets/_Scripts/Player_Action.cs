@@ -28,10 +28,11 @@ public class movement : MonoBehaviour
 
     [Header("shoot")]
     [SerializeField] GameObject Bullet;
-    public float launchForce = 10f;
+    public float launchForce = 0f;
     public float angle = 90;
     private int dirangle = 0;
     private bool powering = false;
+    public GameObject Camera;
 
 
 
@@ -100,6 +101,10 @@ public class movement : MonoBehaviour
             proj.GetComponent<Bullet_Movement>().SetBullet((Vector3)direction);
             powering = false;
             launchForce = 0;
+            if (proj != null)
+            {
+                Camera.GetComponent<Camera>().follow = proj;
+            }
         }
     }
 
