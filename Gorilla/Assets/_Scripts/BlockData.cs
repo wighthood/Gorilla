@@ -5,5 +5,5 @@ using UnityEngine.Tilemaps;
 
 public class BlockData : MonoBehaviour
 {
-    public TileBase dirtGrass, dirtTile, stoneGrass, stoneTile, perlin2D, stoneDark, dirtDark;
+    public TileBase dirtTile;
 }
