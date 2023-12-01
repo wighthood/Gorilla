@@ -40,7 +40,7 @@ public class A_IM : MonoBehaviour
                 Vector2 velocity = new Vector2(x * launchForce, y * launchForce);
                 Vector2 curpos = new Vector2(transform.position.x + x, transform.position.y + y);
                 Vector2 lastpos = curpos;
-                Vector2 gravity = new Vector2(0, -9.80665f);
+                Vector2 gravity = new Vector2(0, -9.81f);
                 while (!detect)
                 {
                     curpos += velocity * Time.fixedDeltaTime;
