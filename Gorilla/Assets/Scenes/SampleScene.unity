@@ -411,7 +411,7 @@ Transform:
   m_GameObject: {fileID: 18829167}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49, y: 21.5, z: 0}
+  m_LocalPosition: {x: 49, y: 17, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -640,7 +640,7 @@ MonoBehaviour:
   blockData: {fileID: 692845528}
   mapLength: 50
   amplitude: 20
-  frequency: 0.4
+  frequency: 0.35
 --- !u!1 &466563069
 GameObject:
   m_ObjectHideFlags: 0
@@ -8305,7 +8305,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -8833,7 +8833,7 @@ Transform:
   m_GameObject: {fileID: 1928564057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 21.5, z: 0}
+  m_LocalPosition: {x: 1, y: 17, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
