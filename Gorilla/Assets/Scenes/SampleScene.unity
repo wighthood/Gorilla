@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18d4dec525fc824da3f94a155cd6eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1928564057}
   Bullet: {fileID: 2226059724574913821, guid: 2a5b47560b1b27e42957bce694b2108f, type: 3}
   angle: 0
   dir: -1
@@ -639,7 +640,7 @@ MonoBehaviour:
   blockData: {fileID: 692845528}
   mapLength: 50
   amplitude: 20
-  frequency: 0.2
+  frequency: 0.4
 --- !u!1 &466563069
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +794,7 @@ GameObject:
   - component: {fileID: 660597377}
   m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
