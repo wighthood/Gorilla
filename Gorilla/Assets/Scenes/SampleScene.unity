@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 18829170}
   - component: {fileID: 18829169}
   - component: {fileID: 18829168}
+  - component: {fileID: 18829174}
   m_Layer: 0
   m_Name: AI
   m_TagString: Untagged
@@ -418,6 +419,23 @@ Transform:
   - {fileID: 1145402988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18829174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18829167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18d4dec525fc824da3f94a155cd6eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 2226059724574913821, guid: 2a5b47560b1b27e42957bce694b2108f, type: 3}
+  angle: 0
+  dir: -1
+  launchForce: 0
+  Delay: 10
 --- !u!1 &89924046
 GameObject:
   m_ObjectHideFlags: 0
@@ -8676,7 +8694,7 @@ GameObject:
   - component: {fileID: 1928564064}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

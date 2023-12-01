@@ -37,7 +37,7 @@ public class movement : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Player.velocity = new Vector2(horizontalspeed * movspeed, Player.velocity.y);
         ChangeAngle();
