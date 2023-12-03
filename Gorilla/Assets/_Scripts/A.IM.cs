@@ -14,6 +14,7 @@ public class A_IM : MonoBehaviour
     public float launchForce;
     public float Delay;
 
+
     private void Start()
     {
         StartCoroutine(delay());
@@ -105,6 +106,7 @@ public class A_IM : MonoBehaviour
         GameObject proj = Instantiate(Bullet, spawn, transform.rotation);
         proj.GetComponent<Bullet_Movement>().SetBullet((Vector3)direction);
     }
-   
+
+ 
 }
 
