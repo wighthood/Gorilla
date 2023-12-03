@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,7 +30,6 @@ public class movement : MonoBehaviour
     public GameObject Camera;
 
 
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -37,6 +37,11 @@ public class movement : MonoBehaviour
         ChangeAngle();
         ResetAngle();
         forceup();
+    }
+
+    public void QuitApp(InputAction.CallbackContext context)
+    {
+        Application.Quit();   
     }
 
     public void move(InputAction.CallbackContext Context)
